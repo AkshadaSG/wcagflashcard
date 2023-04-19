@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ReactCardFlip from "react-card-flip";
+import styles from "./styles.module.css";
+import Data from "./data.json";
 
-function App() {
+const Card = ({ project }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+        <div
+         className={styles.cardOne_container}
+          onClick={() => setIsFlipped((prev) => !prev)}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <img className={styles.cardOne} src={project.src} alt={project.alt} />
+          <span className={styles.tooltiptext}> {project.alt}</span>
+        </div>
+        <div
+          className={styles.cardTwo}
+          onClick={() => setIsFlipped((prev) => !prev)}
+        >
+          {project.description}
+        </div>
+      </ReactCardFlip>
+    </>
   );
-}
+};
 
-export default App;
+const Projects = () => {
+  return (
+    <>
+      <header role="banner" className={styles.banner}>
+        <h1>Flashcards Interaction</h1>
+      </header>
+      <main role="main" className={styles.container}>
+        <div className={styles.card_section}>
+          <div className={styles.cardList}>
+            {Data.map((item, index) => (
+              <Card project={item} key={`card-${index}`} />
+            ))}
+          </div>
+        </div>
+      </main>
+    </>
+  );
+};
+
+export default Projects;

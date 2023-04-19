@@ -1,0 +1,125 @@
+.banner {
+  display: flex;
+  justify-content: left;
+  padding: 40px;
+  /* width: 100%; */
+  line-height: 1.5;
+  font-size: 18px;
+  background: #faf7f2;
+}
+.container {
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  gap: 32px;
+  margin: auto;
+  padding: 8px;
+}
+
+.product_section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 30px;
+  padding: 0 10px;
+}
+
+.cardOne {
+  width: 300px;
+  height: 200px;
+  background: #eaeaea;
+  /* margin: 20px; */
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+}
+
+.cardTwo {
+  width: 300px;
+  height: 200px;
+  background: #123755;
+  font-size: 18px;
+  color: #fff;
+  /* margin: 20px; */
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+}
+
+.cardOne_container .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px
+}
+
+.cardOne_container:hover .tooltiptext {
+  visibility: visible;
+  z-index: 99;
+}
+@media (min-width: 1200px) {
+  .container {
+    padding: 100px 8px 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 30px 0px 0;
+  }
+  .cardList {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    padding: 40px;
+  }
+  .container {
+    padding: 30px 0px 0;
+  }
+  .cardList {
+    gap: 10px;
+    justify-content: center;
+  }
+  .cardOne {
+    width: 120px;
+    height: auto;
+    background: #eaeaea;
+    /* margin: 20px; */
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .cardTwo {
+    width: 120px;
+    height: auto;
+    background: #123755;
+    font-size: 12px;
+    color: #fff;
+    /* margin: 20px; */
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+  }
+}
