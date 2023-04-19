@@ -1,11 +1,15 @@
 .banner {
   display: flex;
+  background: #123755;
+  width: 1170px;
+  margin: 70px auto;
+}
+.banner_title {
+  color: #fff;
   justify-content: left;
-  padding: 40px;
-  /* width: 100%; */
   line-height: 1.5;
   font-size: 18px;
-  background: #faf7f2;
+  padding-left: 30px;
 }
 .container {
   width: 100%;
@@ -36,7 +40,6 @@
   width: 300px;
   height: 200px;
   background: #eaeaea;
-  /* margin: 20px; */
   border-radius: 15px;
   text-align: center;
   padding: 20px;
@@ -48,7 +51,6 @@
   background: #123755;
   font-size: 18px;
   color: #fff;
-  /* margin: 20px; */
   border-radius: 15px;
   text-align: center;
   padding: 20px;
@@ -62,23 +64,16 @@
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-
-  /* Position the tooltip */
   position: absolute;
   z-index: 1;
   bottom: 100%;
   left: 50%;
-  margin-left: -60px
+  margin-left: -60px;
 }
 
 .cardOne_container:hover .tooltiptext {
   visibility: visible;
   z-index: 99;
-}
-@media (min-width: 1200px) {
-  .container {
-    padding: 100px 8px 0;
-  }
 }
 
 @media (max-width: 1200px) {
@@ -88,15 +83,18 @@
   .cardList {
     justify-content: center;
   }
+  .banner {
+    width: 100%;
+    max-width: 1170px;
+  }
 }
 
 @media (max-width: 767px) {
   .banner {
-    padding: 40px;
+    width: 300px;
+    margin: 30px auto;
   }
-  .container {
-    padding: 30px 0px 0;
-  }
+
   .cardList {
     gap: 10px;
     justify-content: center;
@@ -105,7 +103,6 @@
     width: 120px;
     height: auto;
     background: #eaeaea;
-    /* margin: 20px; */
     border-radius: 15px;
     text-align: center;
     padding: 20px;
@@ -117,7 +114,6 @@
     background: #123755;
     font-size: 12px;
     color: #fff;
-    /* margin: 20px; */
     border-radius: 15px;
     text-align: center;
     padding: 20px;

@@ -30,7 +30,7 @@ const Projects = () => {
   return (
     <>
       <header role="banner" className={styles.banner}>
-        <h1>Flashcards Interaction</h1>
+        <h1 className={styles.banner_title}>Flashcards Interaction</h1>
       </header>
       <main role="main" className={styles.container}>
         <div className={styles.card_section}>
