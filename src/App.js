@@ -9,7 +9,7 @@ const Card = ({ project }) => {
     <>
       <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
         <div
-         className={styles.cardOne_container}
+          className={styles.cardOne_container}
           onClick={() => setIsFlipped((prev) => !prev)}
         >
           <img className={styles.cardOne} src={project.src} alt={project.alt} />
