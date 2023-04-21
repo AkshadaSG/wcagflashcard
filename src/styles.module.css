@@ -10,6 +10,11 @@
   line-height: 1.5;
   font-size: 18px;
   padding-left: 30px;
+  padding-right: 30px;
+}
+.banner_title:focus {
+  outline: 2px solid lightgray;
+  border-radius: 8px;
 }
 .container {
   width: 100%;
@@ -50,10 +55,17 @@
   height: 200px;
   background: #123755;
   font-size: 18px;
+  font-weight: 400;
   color: #fff;
   border-radius: 15px;
   text-align: center;
   padding: 20px;
+  margin: 0;
+}
+
+.cardTwo:focus:not(:focus-visible) {
+  outline: 2px solid lightgray;
+  box-shadow: 3px 3px lightgray !important;
 }
 
 .cardOne_container .tooltiptext {
@@ -117,5 +129,6 @@
     border-radius: 15px;
     text-align: center;
     padding: 20px;
+    margin: 0;
   }
 }
